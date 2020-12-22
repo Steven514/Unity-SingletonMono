@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ValkLabs.Util.Singleton
+namespace Valklabs.Util.Singleton
 {
 
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
