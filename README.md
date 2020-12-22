@@ -9,7 +9,7 @@ Purpose:
 Extend the singleton setup and the ability to say if we want to destroy the single on scene load (inspector field). Override a custom OnAwake() function so we don't hit reflection twice from overriding Awake(), and check if a duplicate is already in the scene while the singleton instance is already active to destroy it.
 
 How to Use:  
-Create a class you want to make a singleton, and have it extend the generic type of the singleton. Set if you want your singleton to live across scenes or not.
+Create a class you want to make a singleton, and have it extend the generic type of the singleton. Set if you want your singleton to live across scenes or not in the inspector field _dontDestroyOnLoad.
 ```
 public class YourClass : Singleton<YourClass>
 {
