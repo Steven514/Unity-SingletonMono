@@ -3,7 +3,7 @@ Summary:
 Easily extent a monobehaviour class into a singleton that one owuld expect a singleton to do (make sure not to duplicate the class, etc) 
 
 Description:  
-Base class includes the unity function Awake() (not overridable -- for good reason) while having a custom OnAwake() called at the end of the Awake(), after making sure there is not duplicate singleton instance object in the scene.
+Base class includes the unity function Awake() (not overridable -- for good reason) while having a custom OnAwake() called at the end of the Awake(), after making sure there is no other instance (duplicate) of this object in the scene. Handles duplicate objects by removing the ones that are not the instance/singleton.
  
 Purpose:  
 Extend the singleton setup and the ability to say if we want to destroy the single on scene load (inspector field). Override a custom OnAwake() function so we don't hit reflection twice from overriding Awake(), and check if a duplicate is already in the scene while the singleton instance is already active to destroy it.
